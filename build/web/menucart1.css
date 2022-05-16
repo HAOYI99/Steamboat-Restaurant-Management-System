@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.container > h1{
+    padding: 20px 0;
+}
+
+.cart{
+    display: flex;
+}
+
+.menus{
+    flex: 0.75;
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    height: 220px;
+    border: 1px solid silver;
+    margin-bottom: 20px;
+}
+
+.menu:hover{
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    transform: scale(1.01);
+}
+
+.menu > img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu > img:hover{
+    transform: scale(1.04);
+}
+
+.menu-info{
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.menu-name, .menu-description, .menu-price{
+    margin-bottom: 20px;
+}
+
+.menu-remove{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 25px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+.menu-quantity > input{
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+}
+
+.fa{
+    margin-right: 5px;
+}
+
+.cart-total{
+    flex: 0.25;
+    margin-left: 20px;
+    padding: 20px;
+    min-height: 100px;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+.cart-total p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.cart-total h2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-decoration: underline;
+
+}
+
+
+
+.cart-total th, td {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.cart-total a{
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: tomato;
+    color: white;
+    text-decoration: none;
+
+}
+
+.cart-total button{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: tomato;
+    color: white;
+    text-decoration: none;
+}
+
+.cart-total button:hover{
+    background-color: red;
+}
+
+.cart-total a:hover{
+    background-color: red;
+}
+
+@media screen and (max-width: 700px){
+    .remove{
+        display: none;
+    }
+
+    .product{
+        height: 150px;
+    }
+
+    .product > img{
+        height: 150px;
+        width: 200px;
+    }
+
+    .menu-name, .menu-description, .menu-price{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+
+    .cart{
+        flex-direction: column;
+    }
+
+    .cart-total{
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1220px){
+
+    .container{
+        max-width: 95%;
+    }
+
+}
